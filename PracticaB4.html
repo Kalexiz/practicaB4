@@ -11,7 +11,7 @@
   <div class="row g-0 bg-white p-2 border-bottom align-items-center">
     <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ps-md-4">
       <img src="portada-mini.png" width="24" height="24" class="me-1" alt="La portada de hoy">
-      <span class="small me-3">La portada de hoy</span>
+      <span class="small me-3 d-none d-lg-inline">La portada de hoy</span>
       <img src="radiomarca.png" width="24" height="24" class="rounded-circle me-1" alt="Radio MARCA">
       <span class="small me-3 d-none d-lg-inline">Radio MARCA</span>
       <img src="cuidateplus.png" width="24" height="24" class="rounded-circle me-1" alt="CuídatePlus">
@@ -33,24 +33,55 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <!-- sticky-top mantiene esta navbar siempre visible al hacer scroll (clase nativa de Bootstrap, sin JS) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMarca" aria-controls="navbarMarca" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMarca">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Fútbol</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" aria-current="page" href="#" id="navbarDropdownFutbol" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fútbol
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownFutbol">
+              <li><a class="dropdown-item" href="#">LaLiga Santander</a></li>
+              <li><a class="dropdown-item" href="#">Champions League</a></li>
+              <li><a class="dropdown-item" href="#">Segunda División</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Mercado de fichajes</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Baloncesto</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBaloncesto" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Baloncesto
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBaloncesto">
+              <li><a class="dropdown-item" href="#">ACB</a></li>
+              <li><a class="dropdown-item" href="#">NBA</a></li>
+              <li><a class="dropdown-item" href="#">Euroliga</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Motor</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMotor" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Motor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMotor">
+              <li><a class="dropdown-item" href="#">Fórmula 1</a></li>
+              <li><a class="dropdown-item" href="#">MotoGP</a></li>
+              <li><a class="dropdown-item" href="#">Rally</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Polideportivo</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPolideportivo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Polideportivo
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPolideportivo">
+              <li><a class="dropdown-item" href="#">Tenis</a></li>
+              <li><a class="dropdown-item" href="#">Ciclismo</a></li>
+              <li><a class="dropdown-item" href="#">Golf</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,7 +103,8 @@
   </nav>
 
   <div class="row g-0 bg-light py-2 align-items-center">
-    <div class="col-10 d-flex justify-content-center flex-wrap">
+    <div class="col-md-3 d-none d-md-block"></div>
+    <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap">
       <img src="escudo1.png" width="28" height="28" class="mx-2" alt="Deportivo Alavés">
       <img src="escudo2.png" width="28" height="28" class="mx-2" alt="Athletic Club">
       <img src="escudo3.png" width="28" height="28" class="mx-2" alt="Atlético de Madrid">
@@ -84,7 +116,9 @@
       <img src="escudo9.png" width="28" height="28" class="mx-2" alt="Real Madrid">
       <img src="escudo10.png" width="28" height="28" class="mx-2" alt="Sevilla FC">
     </div>
-
+    <div class="col-12 col-md-3 text-center text-md-end pe-md-3 mt-2 mt-md-0">
+      <span class="fw-bold text-danger small">MARCA</span><span class="fw-bold text-dark small">apuestas.es</span>
+    </div>
   </div>
 
   <img src="anuncio.png" class="img-fluid d-block mx-auto" alt="Banner publicitario">
@@ -182,7 +216,6 @@
       Mercado de fichajes · Rodrigo · Fernando Alonso · Lewandowski · Usain Bolt · Donald Trump · Calendario Liga
     </div>
 
-    <!-- Segunda fila de noticias (2 columnas) -->
     <div class="row g-4">
       <div class="col-12 col-md-6">
         <div class="row">
@@ -282,10 +315,33 @@
           </ul>
         </div>
       </div>
-      <hr class="border-secondary">
-      <p class="text-center mb-0">© Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <div class="bg-white text-dark py-4">
+    <div class="container text-center">
+      <p class="mb-2">© Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</p>
+      <p class="small mb-1">
+        <a>Términos y condiciones de uso</a> ·
+        <a>Política de privacidad</a> ·
+        <a>Política de cookies</a> ·
+        <a>Certificado por OJD</a> ·
+        <a>Contacto</a> ·
+        <a>Publicidad</a> ·
+        <a>Ayuda</a> ·
+        <a>Nuestro equipo</a>
+      </p>
+      <p class="small mb-3">
+        <a>Venta de contenidos</a>
+      </p>
+      <p class="small fw-bold mb-2">Síguenos en</p>
+      <div class="d-flex justify-content-center">
+        <img src="facebook.png" width="24" height="24" class="mx-2" alt="Facebook">
+        <img src="x.png" width="24" height="24" class="mx-2" alt="Twitter">
+        <img src="instagram.png" width="24" height="24" class="mx-2" alt="Instagram">
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
