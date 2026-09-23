@@ -34,71 +34,100 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMarca" aria-controls="navbarMarca" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMarca">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" aria-current="page" href="#" id="navbarDropdownFutbol" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger py-0 sticky-top shadow-sm" id="mainNavbar" style="z-index: 1030;">
+    <div class="container-fluid px-lg-4">
+      
+      <!-- Logo "M" que aparece al hacer scroll -->
+      <a class="navbar-brand d-none align-items-center justify-content-center bg-white text-danger px-3 py-1 my-0 me-2 fw-bold fs-4 text-decoration-none shadow-sm" id="stickyBrand" href="#" style="font-family: Arial, sans-serif;">
+        M
+      </a>
+
+      <!-- Botones e iconos de la derecha (se muestran al hacer scroll, junto al toggler) -->
+      <div class="d-flex align-items-center gap-1 ms-auto order-lg-last">
+        <div class="d-none align-items-center gap-1" id="stickyButtons">
+          <button class="btn btn-link text-white fs-5 p-1 text-decoration-none" type="button" title="Buscar">
+            <i class="bi bi-search"></i>
+          </button>
+          <a href="#" class="btn btn-light text-danger fw-bold btn-sm px-2 py-1 text-nowrap shadow-sm">Suscríbete</a>
+          <a href="#" class="btn btn-outline-light text-white fw-bold btn-sm px-2 py-1 text-nowrap">Iniciar sesión</a>
+        </div>
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Menú desplegable -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto fw-bold">
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle text-white px-3 py-3 bg-black bg-opacity-25" href="#" data-bs-toggle="dropdown">
               Fútbol
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownFutbol">
-              <li><a class="dropdown-item" href="#">LaLiga Santander</a></li>
-              <li><a class="dropdown-item" href="#">Champions League</a></li>
-              <li><a class="dropdown-item" href="#">Segunda División</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Mercado de fichajes</a></li>
+            <div class="dropdown-menu w-100 border-0 rounded-0 bg-dark shadow-lg p-4 mt-0">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 col-md-3">
+                    <h6 class="text-white fw-bold mb-3">España</h6>
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">LaLiga EA Sports</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">LaLiga Hypermotion</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Copa del Rey</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <h6 class="text-white fw-bold mb-3">Europa</h6>
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Champions League</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Europa League</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Premier League</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <h6 class="text-white fw-bold mb-3">América</h6>
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Liga MX</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Copa Libertadores</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">MLS</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <h6 class="text-white fw-bold mb-3">Selecciones</h6>
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Mundial</a></li>
+                      <li class="mb-2"><a class="text-white-50 text-decoration-none" href="#">Eurocopa</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white px-3 py-3" href="#" data-bs-toggle="dropdown">Baloncesto</a>
+            <ul class="dropdown-menu bg-dark border-0 rounded-0">
+              <li><a class="dropdown-item text-white-50" href="#">NBA</a></li>
+              <li><a class="dropdown-item text-white-50" href="#">Liga Endesa</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBaloncesto" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Baloncesto
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBaloncesto">
-              <li><a class="dropdown-item" href="#">ACB</a></li>
-              <li><a class="dropdown-item" href="#">NBA</a></li>
-              <li><a class="dropdown-item" href="#">Euroliga</a></li>
+            <a class="nav-link dropdown-toggle text-white px-3 py-3" href="#" data-bs-toggle="dropdown">Motor</a>
+            <ul class="dropdown-menu bg-dark border-0 rounded-0">
+              <li><a class="dropdown-item text-white-50" href="#">Fórmula 1</a></li>
+              <li><a class="dropdown-item text-white-50" href="#">MotoGP</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMotor" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Motor
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMotor">
-              <li><a class="dropdown-item" href="#">Fórmula 1</a></li>
-              <li><a class="dropdown-item" href="#">MotoGP</a></li>
-              <li><a class="dropdown-item" href="#">Rally</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link text-white px-3 py-3" href="#">Polideportivo</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPolideportivo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Polideportivo
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPolideportivo">
-              <li><a class="dropdown-item" href="#">Tenis</a></li>
-              <li><a class="dropdown-item" href="#">Ciclismo</a></li>
-              <li><a class="dropdown-item" href="#">Golf</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Más +
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMas">
-              <li><a class="dropdown-item" href="#">Coches</a></li>
-              <li><a class="dropdown-item" href="#">Última hora</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Agenda TV</a></li>
+            <a class="nav-link dropdown-toggle text-white px-3 py-3" href="#" data-bs-toggle="dropdown">Más +</a>
+            <ul class="dropdown-menu bg-dark border-0 rounded-0">
+              <li><a class="dropdown-item text-white-50" href="#">Tenis</a></li>
+              <li><a class="dropdown-item text-white-50" href="#">Ciclismo</a></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control form-control-sm" type="search" placeholder="Buscar en marca.com">
-        </form>
       </div>
+
     </div>
   </nav>
 
@@ -357,6 +386,28 @@
     </div>
   </div>
 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    window.addEventListener('scroll', function() {
+      const stickyBrand = document.getElementById('stickyBrand');
+      const stickyButtons = document.getElementById('stickyButtons');
+      
+      if (window.scrollY > 120) {
+        // mostrar elementos en la barra
+        stickyBrand.classList.remove('d-none');
+        stickyBrand.classList.add('d-flex');
+        
+        stickyButtons.classList.remove('d-none');
+        stickyButtons.classList.add('d-flex');
+      } else {
+        // ocultar elementos
+        stickyBrand.classList.remove('d-flex');
+        stickyBrand.classList.add('d-none');
+        stickyButtons.classList.remove('d-flex');
+        stickyButtons.classList.add('d-none');
+      }
+    });
+  </script>
 </body>
 </html>
